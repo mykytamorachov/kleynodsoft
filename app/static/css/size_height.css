@@ -1,0 +1,71 @@
+@media screen and (max-width: 650px)  {/* для разрешения экрана до 650 пикселей */
+
+.nz_i {
+	border-top:1px solid #c8db65;
+			color:#87c908;
+	margin: 15px 20px;
+	height: 150px;
+}
+.col2 {
+    float:right;
+	margin-top: -20px;
+	height: 150px;
+	
+}
+.size {
+     line-height: 100%;
+	 margin-left: 15px;
+	 width:960px;
+	 margin-bottom: 25px;
+}
+#tx_i {
+	margin: 20px 20px;
+	padding:0px 0px 0px;
+	font-size: 12px;
+	font-weight:700;
+	word-spacing: 10;
+	width: 960px;
+}
+.zx {
+     font-size :20pt;
+	 line-height: 100%;
+	 margin-top: 15px;
+	  margin-bottom: 15px;
+}
+.siz {
+     font-size :12pt;
+	 line-height: 100%;
+}
+.nj {
+   line-height: 100%;
+   font-size :12pt;
+}
+.menu_nav ul li a {
+	display:block;
+	margin:0;
+	padding:14px 24px;
+	font-size:20px;
+	
+	font-weight:bold;
+	color:#9f9f9f;
+	text-decoration:none;
+	text-align:center;
+	
+	background:none;
+}
+.menu_nav {
+	padding:0px 0 0;
+	height:45px;
+	width:960px;
+	margin-top: -5px;
+	
+}
+.logo {
+	padding:0;
+	float:left;
+	width:auto;
+	height:110px;
+	
+}
+}
+

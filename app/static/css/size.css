@@ -1,0 +1,320 @@
+@media (max-width: 960px) { /* это будет показано при разрешении монитора до 960 пикселей */
+  .main {padding: 0; margin:0;} /* основное содержимое занимает всё пространство окна */
+  .content {
+	margin:0px 0px;
+	padding:0 0 0px;
+	width:960;
+}
+   body {
+	margin: 0 auto;
+	padding:0;
+	width:100%;
+	color:#ffffff;
+	font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
+	background:#03adcb url(../images/osn.png) repeat center top;
+	overflow: auto;
+}
+    html, {
+	padding:0;
+	margin:0;
+	min-width: 100%;
+
+}
+.logo {
+	padding:0;
+	float:left;
+	width:auto;
+	height:110px;
+}
+.header_resize {
+	margin:0 0px;
+	padding:0 0 32px;
+	width:100%;
+}
+.header_resize_i {
+	margin:0 0px;
+	padding:0 0 0px;
+	width:100%;
+}
+.menu_nav {
+	margin:0px 0px;
+	padding:0px 0 0;
+	height:35px;
+	width:100%;
+	
+}
+.menu_nav ul li a {
+	display:block;
+	margin:0;
+	padding:9px 24px;
+	font-size:18px;
+	
+	font-weight:bold;
+	color:#9f9f9f;
+	text-decoration:none;
+	text-align:center;
+	
+	background:none;
+}
+ul.dropdown li  { font-size: 12px; font-weight: normal; zoom: 1; background: none; width: 185px; text-align: left;  }
+.menu_nav ul li {
+	margin:0;
+	padding:0 0 0 0px;
+	float:left;
+	margin-bottom: -5px;
+}
+.slider {
+	padding:0;
+	width:960px;
+    margin:0px 0px;
+}
+
+#tx_i {
+	margin: 0px 0px;
+	padding:0px 0px 0px;
+	font-size: 12px;
+	font-weight:700;
+	word-spacing: 5;
+	width: 960px;
+}
+.zx {font-size: 18px;}
+.grafic {
+    width: 960px;
+	height: 300px;
+	margin: -38px 0px;
+	margin-top: -40px;
+	padding: 0px 0px 0px;
+}
+.cv {width: 960px; height: px; margin: -4px 0px; padding: 0 0;}
+.grafic2 {
+    width: 960px;
+	margin:-32px 0px;
+	padding:0px 0px 0px;
+}
+.grafic_w {
+    width: 960px;
+	height: 300px;
+	margin: -32px 0px;
+	margin-bottom: 30px;
+	padding: 0px 0px 0px;
+}
+}
+
+@media (max-width: 1024px) and (min-width: 960px) {  /* для разрешения экрана от 470 до 930 пикселей */
+    .main {padding: 0; margin:0 2%; max-width: 960px;} /* основное содержимое занимает всё пространство окна */
+  .content {
+	margin:0 2%;
+	padding:0 0 0px;
+	width:960;
+}
+   body {
+	margin: 0 auto;
+	padding:0;
+	width:100%;
+	color:#ffffff;
+	font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
+	background:#03adcb url(../images/osn.png) repeat center top;
+	overflow: auto;
+}
+    html, {
+	padding:0;
+	margin:0;
+	min-width: 100%;
+
+}
+.logo {
+	padding:0;
+	float:left;
+	width:auto;
+	height:110px;
+}
+.header_resize {
+	margin:0 0px;
+	padding:0 0 32px;
+	width:100%;
+}
+.header_resize_i {
+	margin:0 0px;
+	padding:0 0 0px;
+	width:100%;
+}
+.menu_nav {
+	margin:0px 2%;
+	padding:0px 0 0;
+	height:35px;
+	width:960px;
+	
+}
+.menu_nav ul li a {
+	display:block;
+	margin:0;
+	padding:9px 24px;
+	font-size:18px;
+	
+	font-weight:bold;
+	color:#9f9f9f;
+	text-decoration:none;
+	text-align:center;
+	
+	background:none;
+}
+ul.dropdown li  { font-size: 12px; font-weight: normal; zoom: 1; background: none; width: 185px; text-align: left;  }
+.menu_nav ul li {
+	margin:0;
+	padding:0 0 0 0px;
+	float:left;
+	margin-bottom: -5px;
+}
+.slider {
+	padding:0;
+	width:960px;
+    margin:0px 2%;
+}
+
+#tx_i {
+	margin: 0px 0px;
+	padding:0px 0px 0px;
+	font-size: 12px;
+	font-weight:700;
+	word-spacing: 5;
+	width: 960px;
+}
+#tx_r {
+	margin: 0px -15px;
+	padding:0px 0px 0px;
+	font-size: 16px;
+	font-weight:700;
+	word-spacing: 5;
+	width: 960px;
+}
+.zx {font-size: 18px;}
+.grafic {
+    width: 960px;
+	height: 300px;
+	margin: -32px 2%;
+	padding: 0px 0px 0px;
+}
+.cv {width: 960px; height: px; margin: -4px 2%; padding: 0 0;}
+.grafic2 {
+    width: 960px;
+	margin:-32px 2%;
+	padding:0px 0px 0px;
+}
+.grafic_w {
+    width: 960px;
+	height: 300px;
+	margin: -32px 2%;
+	margin-bottom: 30px;
+	padding: 0px 0px 0px;
+}
+}
+
+@media (max-width: 1330px) and (min-width: 1024px) { /* если максимальное разрешение экрана составит 469 пикселей */
+    .main {padding: 0; margin:0 4%; max-width: 960px;} /* основное содержимое занимает всё пространство окна */
+  .content {
+	margin:0 4%;
+	padding:0 0 0px;
+	width:960;
+	
+}
+   body {
+	margin: 0 auto;
+	padding:0;
+	width:100%;
+	color:#ffffff;
+	font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
+	background:#03adcb url(../images/osn.png) repeat center top;
+	overflow: auto;
+}
+    html, {
+	padding:0;
+	margin:0;
+	min-width: 100%;
+
+}
+.logo {
+	padding:0;
+	float:left;
+	width:auto;
+	height:110px;
+}
+.header_resize {
+	margin:0 0px;
+	padding:0 0 32px;
+	width:100%;
+}
+.header_resize_i {
+	margin:0 0px;
+	padding:0 0 0px;
+	width:100%;
+}
+.menu_nav {
+	margin:0 4%;
+	padding:0px 0 0;
+	height:35px;
+	width:100%;
+	
+}
+.menu_nav ul li a {
+	display:block;
+	margin:0;
+	padding:9px 24px;
+	font-size:18px;
+	
+	font-weight:bold;
+	color:#9f9f9f;
+	text-decoration:none;
+	text-align:center;
+	
+	background:none;
+}
+ul.dropdown li  { font-size: 12px; font-weight: normal; zoom: 1; background: none; width: 185px; text-align: left;  }
+.menu_nav ul li {
+	margin:0;
+	padding:0 0 0 0px;
+	float:left;
+	margin-bottom: -5px;
+}
+.slider {
+	padding:0;
+	width:960px;
+    margin:0px 4%;
+}
+
+#tx_i {
+	margin: 0px 0px;
+	padding:0px 0px 0px;
+	font-size: 12px;
+	font-weight:700;
+	word-spacing: 5;
+	width: 960px;
+}
+#tx_r {
+	margin: 0px 0px;
+	padding:0px 0px 0px;
+	font-size: 16px;
+	font-weight:700;
+	word-spacing: 5;
+	width: 960px;
+}
+.zx {font-size: 18px;}
+.grafic {
+    width: 960px;
+	height: 300px;
+	margin: -32px 4%;
+	padding: 0px 0px 0px;
+}
+.cv {width: 960px; height: px; margin: -4px 4%; padding: 0 0;}
+.grafic2 {
+    width: 960px;
+	margin:-32px 4%;
+	padding:0px 0px 0px;
+}
+.grafic_w {
+    width: 960px;
+	height: 300px;
+	margin: -32px 4%;
+	margin-bottom: 30px;
+	padding: 0px 0px 0px;
+}
+}

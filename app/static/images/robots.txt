@@ -1,0 +1,9 @@
+User-agent: * 
+Disallow: /en/
+Allow: /en/news/the_review_of_opera_15.html
+Allow: /en/news/top_100_outsourcing.html
+Allow: /en/news/CCTV_sysytems_in_Kharkov.html
+Allow: /en/news/do_it_yourself.html
+Allow: /en/news/troyan_for_linux.html
+Sitemap: /sitemap.xml
+
