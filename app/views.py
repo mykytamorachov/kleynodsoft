@@ -25,41 +25,56 @@ def add_news():
     }
     return render_template('/admin/add_news.html', context=context)
 
-@app.route('/registration', methods=["POST", "GET"])
-def registration():
+@app.route('/add_user', methods=["POST", "GET"])
+@app.route('/add_user/', methods=["POST", "GET"])
+def add_user():
     if request.method == 'POST':
-        request_data = loads(request.data)
         try:
-            if not re.match(r"[^@]+@[^@]+\.[^@]+", request_data['email']):
+            if not re.match(r"[^@]+@[^@]+\.[^@]+", request.form['email']):
                 response = {
                 'ansCode': 77,
                 'Error': 'Wrong email'
             }
             else:
                 user = User(
-                        request_data['name'],
-                        request_data['username'],
-                        request_data['email']
+                        request.form['name'],
+                        request.form['username'],
+                        request.form['email']
                     )
                 db.session.add(user)
                 db.session.commit()
-                response = {
-                    'ansCode':1,
-                    'UID':user.id
-                }
         except:
             response = {
                 'ansCode': 99,
                 'Error': 'Wrong params'
             }
-        return Response(
-            response=dumps(response),
-            status=200,
-            headers={
-                'Content-Type':'application/json'
-            })
+        users = User.query.paginate(1, per_page=PER_PAGE ,error_out=True)
+        context = {
+            'users':users
+        }
+        return render_template("admin/users.html",
+                               context=context)
     else:
         abort(404)
+
+@app.route('/delete_user', methods=["POST", "GET"])
+def del_user():
+    if request.method == "POST":
+        user = User.query.filter_by(id=int(request.form['id'])).first()
+        db.session.delete(user)
+        db.session.commit()
+        return redirect(url_for('get_users'))
+    else:
+        abort(404)
+
+@app.route('/add_user_page')
+@app.route('/add_user_page/')
+def add_user_page():
+    form = UserForm()
+    context = {
+        'form': form
+    }
+    return render_template('/admin/add_user.html', context=context)
 
 @app.route('/users', defaults={'page':1})
 @app.route('/users/page/<int:page>')

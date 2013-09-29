@@ -19,9 +19,10 @@
                 </td>
             </tr>
             <tr>
+                <td>ID</td>
+                <td>Name</td>
                 <td>Username</td>
                 <td>Email</td>
-                <td>Facebook ID</td>
                 <td>Joining date</td>
                 <td>Edit</td>
             </tr>
@@ -29,9 +30,10 @@
             <tbody>
             {% for user in context.users.items %}
             <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
                 <td>{{ user.username }}</td>
                 <td class="email">{{ user.email }}</td>
-                <td></td>
                 <td>{{ user.joined_date }}</td>
                 <td>
                     <form action="/delete_user" method="post">
@@ -49,4 +51,5 @@
             {% if context.users.has_next %}<a href="{{ url_for('get_users', page=context.users.next_num) }}">Next</a>{% endif %}
         </div>
         <div class="add"><a href="/export_list">Export list</a></div>
+    <div class="add"><a href="/add_user_page">Add User</a></div>
 {% endblock %}

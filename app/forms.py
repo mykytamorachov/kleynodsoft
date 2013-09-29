@@ -7,3 +7,8 @@ class NewsForm(Form):
     text = TextAreaField('Text', validators=[])
     image_url = FileField('Image', validators=[])
     language = SelectField("Language",choices=[('EN', 'English'), ('RU', "Russian"), ('UA', "Ukrainian")])
+
+class UserForm(Form):
+    name = TextField('Name', validators=[])
+    username = TextField('Username', validators=[])
+    email = TextField('Email', validators=[])
