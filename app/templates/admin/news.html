@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>Albums</h2>
-<table class="albums">
+<h2>posts</h2>
+<table class="posts">
     <col width="20px"/>
     <col width="100">
     <col width="100">
@@ -12,37 +12,41 @@
        
         <tr>
             <td colspan="6">
-                <select id="album_search_type" class="filter_select">
-                    <option value="aName">Album name</option>
+                <select id="post_search_type" class="filter_select">
+                    <option value="aName">post name</option>
                     <option value="aPerformer">Performer</option>
                 </select>
-                <input id="search_album" type="search" placeholder="search"/>
+                <input id="search_post" type="search" placeholder="search"/>
             </td>
         </tr>
         <tr>
             <td style="width: 25px;">id</td>
-            <td style="width: 150px;">Album name</td>
-            <td>Performer</td>
+            <td style="width: 150px;">Title</td>
+            <td>Text</td>
             <td style="width:50px">Cover image</td>
-            <td style="width: 100px;">Year</td>
+            <td style="width: 100px;">Language</td>
             <td>Edit</td>
         </tr>
     </thead>
     <tbody>
-    {% for album in context.albums.items %}
+    {% for post in context.posts.items %}
     <tr>
-        <td>{{ album.id }}</td>
-        <td>{{ album.album_name }}</td>
-        <td>{{ album.performer }}</td>
-        {% if album.cover_url == None %}
-        <td style="text-align: center; width: 50px; "><img src="/static/img/No_Cover.jpg"  style="height:50px; width:50px; padding: 5px; margin-left: -5x;"/></td>
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.text }}</td>
+        {% if post.image_url == None %}
+        <td style="text-align: center; width: 50px; "><img src="/static/images/No_Cover.jpg"  style="height:50px; width:50px; padding: 5px; margin-left: -5x;"/></td>
         {% else %}
-        <td style="text-align: center; width: 50px; "><img src="{{ album.cover_url }}"  style="height:50px; width:50px; padding: 5px; margin-left: -5x;"/></td>
+        <td style="text-align: center; width: 50px; "><img src="{{ post.image_url }}"  style="height:50px; width:50px; padding: 5px; margin-left: -5x;"/></td>
         {% endif %}
-        <td>{{ album.year }}</td>
-        <td class="act">            <a href="/albums/edit/{{ album.id }}">Edit</a><br>
-            <form method="post"  action="/delete_album">
-                <input type="hidden" value="{{ album.id }}" name="album_id">
+        {% if post.language == None %}
+        <td>None</td>
+        {% else %}
+        <td>{{ post.language.language_name.description }}</td>
+        {% endif %}
+        <td class="act">            <a href="/posts/edit/{{ post.id }}">Edit</a><br>
+            <form method="post"  action="/delete_post">
+                <input type="hidden" value="{{ post.id }}" name="post_id">
                 <input type="submit" value="Delete" class="del_button">
             </form>
         </td>
@@ -51,9 +55,9 @@
     </tbody>
 </table>
 <div id="pagination">
-    <span>Page: {{ context.albums.page }} of {{ context.albums.pages }}</span>
-    {% if context.albums.has_prev %}<a href="{{ url_for('get_albums', page=context.albums.prev_num) }}">Prev</a>{% endif %}
-    {% if context.albums.has_next %}<a href="{{ url_for('get_albums', page=context.albums.next_num) }}">Next</a>{% endif %}
+    <span>Page: {{ context.posts.page }} of {{ context.posts.pages }}</span>
+    {% if context.posts.has_prev %}<a href="{{ url_for('get_posts', page=context.posts.prev_num) }}">Prev</a>{% endif %}
+    {% if context.posts.has_next %}<a href="{{ url_for('get_posts', page=context.posts.next_num) }}">Next</a>{% endif %}
 </div>
-<div class="add"><a href="/albums/add">Add new album</a></div>
+<div class="add"><a href="/posts/add">Add new post</a></div>
 {% endblock %}

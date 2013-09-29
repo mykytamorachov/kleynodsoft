@@ -9,6 +9,8 @@ import re
 from app.models import *
 from app.forms import *
 
+PER_PAGE = 5
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -58,6 +60,25 @@ def registration():
             })
     else:
         abort(404)
+
+@app.route('/users', defaults={'page':1})
+@app.route('/users/page/<int:page>')
+def get_users(page):
+        users = User.query.paginate(page, per_page=PER_PAGE ,error_out=True)
+        context = {
+            'users':users
+        }
+        return render_template("admin/users.html",
+                               context=context)
+@app.route('/posts', defaults={'page':1})
+@app.route('/posts/page/<int:page>')
+def get_posts(page):
+        posts = Posts.query.paginate(page, per_page=PER_PAGE, error_out=True)
+        context = {
+            'posts': posts
+        }
+        return render_template("admin/news.html",
+                                context=context)
 
 @app.route('/news/add/', methods=['GET', 'POST'])
 def add_post():
