@@ -1,0 +1,539 @@
+*{
+    font-family: sans-serif;
+}
+
+body{
+	background: whitesmoke;
+}
+
+header{
+    height: 140px;
+
+}
+
+table.albums{
+    width: 1000px;
+    table-layout: fixed;
+}
+
+nav{
+    height: 50px;
+    border: 1px solid #dddddd;
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+nav ul{
+    list-style: none;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+    line-height: 50px;
+    height: 50px;
+    width: 20%;
+}
+
+nav a{
+    color: #11557C;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 0 0 1px #ffffff;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+}
+
+nav a:hover{
+    color: red;
+}
+
+td{
+    vertical-align: top;
+}
+
+#content{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#content table{
+    width: 1000px;
+    border-spacing: 0;
+    border-radius: 4px;
+}
+
+tr td{
+    padding-left: 10px;
+}
+
+input[type="search"]{
+    border: 1px solid #ddd;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    outline: none;
+}
+
+thead tr{
+    background:#D01F3C;
+    border-spacing: 0;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+
+thead td{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tbody td{
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+
+tbody td:last-child{
+    border-right: none;
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+}
+
+td {
+
+}
+
+td a{
+    text-decoration: none;
+    color: #30799B;
+}
+
+form input {
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #666;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+form textarea {
+    width: 300px;
+    height: 200px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #666;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table{
+    border-top: none;
+}
+
+thead tr:first-child td{
+    background: whitesmoke;
+    height: 40px;
+}
+
+.add{
+    background: #485F6E;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    color: #fff;
+    border-radius: 8px;
+    float: right;
+}
+#add{
+    margin-right: 251px;
+}
+
+.add a{
+    color: #fff;
+    text-decoration: none;
+}
+
+td input{
+    width: 50px;
+    border: 1px solid #ddd;
+    background: -webkit-linear-gradient(#fff, #f6f6f6);
+    background: -moz-linear-gradient(#fff, #f6f6f6);
+    background: -o-linear-gradient(#fff, #f6f6f6);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="search"]{
+    width: 200px;
+}
+
+.logo{
+    width: 1000px;
+    margin: 0 auto;
+    height: 50px;
+}
+.logo img{
+    width: 300px;
+    height: 75px;
+    margin: -13px 0 0 -35px;
+}
+
+h1{
+    width: 100px;
+    float: left;
+    line-height: 50px;
+    margin-top: 0px;
+    font-weight: normal;
+    color: #356AA0;
+}
+
+.logo form{
+    float: right;
+}
+
+.logo input{
+    border-radius: 4px;
+    width: 60px;
+     border: 1px solid #dddddd;
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+}
+
+h2{
+    color: #3F4C6B;
+    font-weight: normal;
+    width: 100px;
+}
+
+.sign input{
+    width: 100px;
+    border: 1px solid #dddddd;
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+    border-radius: 3px;
+    float: left;
+    background: #000;
+    margin-left: 344px;
+}
+
+.sign{
+    width: 300px;
+    background: #000;
+}
+
+td form{
+    height: 30px;
+    margin-top: 2px;
+}
+
+.log input{
+    color: #666666;
+}
+
+input[type="file"]{
+    background: #fff;
+}
+
+input[type="submit"]{
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input{
+    vertical-align: middle;
+    width: 500px;
+}
+
+select{
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 300px;
+    color: #777;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background: #fff;
+    outline: none;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.del_button{
+    background: #000;
+    padding: 0;
+    border: 0;
+    background-repeat: no-repeat;
+    filter: none;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.act{
+    text-align: center;
+    width: 40px;
+}
+
+.act input{
+    background: transparent;
+    color: #36393D;
+}
+
+.act input:hover{
+    background: transparent;
+    background-image: none;
+}
+
+#showAddWithUrl{
+    border-radius: 4px;
+    border: 1px solid  #36393D;
+    background-image: -webkit-linear-gradient(#f6f6f6, #ccc);
+    background-image: -moz-linear-gradient(#f6f6f6, #ccc);
+    background-image: -o-linear-gradient(#f6f6f6, #ccc);
+    color: #48629d;
+    text-shadow: 0 0 4px #fff;
+    margin: auto;
+    width: 200px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#imageUrlField{
+    display: none;
+}
+
+dd input{
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    outline: none;
+    color: #444;
+}
+
+.chord_list{
+    width: 500px;
+    margin-left: 175px;
+}
+
+.chord_list tbody tr{
+    background: #fff;
+}
+
+.chord_list thead tr td{
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    border: 1px solid #ddd;
+}
+
+.chord_list td{
+    background: transparent;
+    border: none;
+}
+
+.chord_list input{
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 250px;
+    font-weight: bold;
+    outline: none;
+}
+
+#chord_form{
+    display: none;
+}
+#instruments_form{
+    display: none;
+
+}
+
+button{
+    height: 40px;
+    line-height: 40px;
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+}
+
+button:hover{
+    background-image: -webkit-linear-gradient(#f6f6f6, #ccc);
+    background-image: -o-linear-gradient(#f6f6f6, #ccc);
+    background-image: -moz-linear-gradient(#f6f6f6, #ccc);
+}
+
+form img{
+    border-radius: 4px;
+}
+
+.filter_select{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    position: relative;
+    z-index: 500;
+    margin-left: -5px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background-image: -webkit-linear-gradient(#f6f6f6, #ccc);
+    background-image: -moz-linear-gradient(#f6f6f6, #ccc);
+    background-image: -o-linear-gradient(#f6f6f6, #ccc);
+    color: #48629d;
+    text-shadow: 0 0 4px #fff;
+}
+
+input[type="file"] {
+      opacity: 0;
+      filter:alpha(opacity:0);
+      background: transparent;
+      border: none;
+      color: whitesmoke;
+      width: 200px;
+      height: 200px;
+      margin-top: -30px;
+    }
+
+form img{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+#black img{
+     margin-top: -200px;
+}
+
+#black{
+    border-radius: 4px;
+    border: 1px solid  #36393D;
+    color: #48629d;
+    text-shadow: 0 0 4px #fff;
+    margin: auto;
+    width: 200px;
+    cursor: pointer;
+    line-height: 30px;
+    height: 200px;
+    background: #fff;
+}
+
+.div_submit{
+    background-image: -webkit-linear-gradient(#fff, #f6f6f6);
+    background-image: -moz-linear-gradient(#fff, #f6f6f6);
+    background-image: -o-linear-gradient(#fff, #f6f6f6);
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+    border: 1px solid  #36393D;
+    color: #48629d;
+    text-shadow: 0 0 4px #fff;
+    margin: auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+thead tr td{
+    overflow: hidden;
+}
+
+#pagination{
+    float:left;
+    width: 280px;
+    padding: 10px;
+    padding-left: 0;
+    text-align: left;
+    color: #356AA0;
+}
+
+#pagination a{
+    text-decoration: none;
+    color: #356AA0;
+}
+
+footer{
+    height: 100px;
+}
+
+span.div_submit{
+    width: 100px;
+    padding: 5px;
+    display: inline-block;
+}
+
+input.div_submit{
+    width: 100px;
+    padding: 5px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+#showChordForm{
+    color: #356AA0;
+    cursor: pointer;
+}
+
+#addChordButton{
+    background-image: -webkit-linear-gradient(#ccc, #666);
+    background-image: -moz-linear-gradient(#ccc, #666);
+    background-image: -o-linear-gradient(#ccc, #666);
+    padding-right: 0;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+#showInstrumentForm{
+    color: #356AA0;
+    cursor: pointer;
+}
+
+#addInstrumentButton{
+    background-image: -webkit-linear-gradient(#ccc, #666);
+    background-image: -moz-linear-gradient(#ccc, #666);
+    background-image: -o-linear-gradient(#ccc, #666);
+    padding-right: 0;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}

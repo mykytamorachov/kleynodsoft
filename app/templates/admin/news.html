@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Albums</h2>
+<table class="albums">
+    <col width="20px"/>
+    <col width="100">
+    <col width="100">
+    <col width="50">
+    <col width="20">
+    <col width="30">
+    <thead>
+       
+        <tr>
+            <td colspan="6">
+                <select id="album_search_type" class="filter_select">
+                    <option value="aName">Album name</option>
+                    <option value="aPerformer">Performer</option>
+                </select>
+                <input id="search_album" type="search" placeholder="search"/>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 25px;">id</td>
+            <td style="width: 150px;">Album name</td>
+            <td>Performer</td>
+            <td style="width:50px">Cover image</td>
+            <td style="width: 100px;">Year</td>
+            <td>Edit</td>
+        </tr>
+    </thead>
+    <tbody>
+    {% for album in context.albums.items %}
+    <tr>
+        <td>{{ album.id }}</td>
+        <td>{{ album.album_name }}</td>
+        <td>{{ album.performer }}</td>
+        {% if album.cover_url == None %}
+        <td style="text-align: center; width: 50px; "><img src="/static/img/No_Cover.jpg"  style="height:50px; width:50px; padding: 5px; margin-left: -5x;"/></td>
+        {% else %}
+        <td style="text-align: center; width: 50px; "><img src="{{ album.cover_url }}"  style="height:50px; width:50px; padding: 5px; margin-left: -5x;"/></td>
+        {% endif %}
+        <td>{{ album.year }}</td>
+        <td class="act">            <a href="/albums/edit/{{ album.id }}">Edit</a><br>
+            <form method="post"  action="/delete_album">
+                <input type="hidden" value="{{ album.id }}" name="album_id">
+                <input type="submit" value="Delete" class="del_button">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div id="pagination">
+    <span>Page: {{ context.albums.page }} of {{ context.albums.pages }}</span>
+    {% if context.albums.has_prev %}<a href="{{ url_for('get_albums', page=context.albums.prev_num) }}">Prev</a>{% endif %}
+    {% if context.albums.has_next %}<a href="{{ url_for('get_albums', page=context.albums.next_num) }}">Next</a>{% endif %}
+</div>
+<div class="add"><a href="/albums/add">Add new album</a></div>
+{% endblock %}

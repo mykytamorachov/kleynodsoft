@@ -4,6 +4,7 @@ from flask.ext.mail import Mail
 
 app = Flask(__name__)
 ALLOWED_EXTENSIONS = set(['jpg', 'png', 'gif', 'jpeg'])
+UPLOAD_FOLDER = '/home/mykyta/PycharmProjects/kleynodsoft/app/static/img/posts'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/kleynodsoft'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Vakoms4ever!@localhost/thatriff'
 app.secret_key = "\xa7\xab\x87\xd7\xff\xdc\xae \x0cY\x87\xf9t\xea\x19\t\x0eN\xe9\xea\xe8\xb6\xd6>"

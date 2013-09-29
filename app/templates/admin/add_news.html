@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" id="albumForm" action="/news/add/">
+	{% for field in context.form %}
+	<p>{{ field(placeholder=field.name) }}</p>
+	{% endfor %}
+	<p id="showAddWithUrl">Add image with url</p>
+	<p><input type="text" id="imageUrlField" placeholder="Image url" name="cover_url"></p>
+	<p id="imageCover"></p>
+    <button type="submit" id="sendForm" class="div_submit">
+
+            Add
+
+    </button>
+</form>
+{% endblock %}

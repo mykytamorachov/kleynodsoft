@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Users</h2>
+        <table class="albums">
+            <col width="20"/>
+            <col width="80">
+            <col width="50">
+            <col width="100">
+            <col width="60">
+            <col width="20">
+            <thead>
+            <tr>
+                <td colspan="6">
+                    <select id="user_search_type" class="filter_select">
+                        <option value="uUsername">Username</option>
+                        <option value="uEmail">Email</option>
+                    </select>
+                    <input id="search_user" type="search" placeholder="search"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Facebook ID</td>
+                <td>Joining date</td>
+                <td>Edit</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in context.users.items %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td class="email">{{ user.email }}</td>
+                <td></td>
+                <td>{{ user.joined_date }}</td>
+                <td>
+                    <form action="/delete_user" method="post">
+                        <input type="hidden" name="id" value="{{ user.id }}"/>
+                        <input type="submit" value="delete"/>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div id="pagination">
+            <span>Page: {{ context.users.page }} of {{ context.users.pages }}</span>
+            {% if context.users.has_prev %}<a href="{{ url_for('get_users', page=context.users.prev_num) }}">Prev</a> | {% endif %}
+            {% if context.users.has_next %}<a href="{{ url_for('get_users', page=context.users.next_num) }}">Next</a>{% endif %}
+        </div>
+        <div class="add"><a href="/export_list">Export list</a></div>
+{% endblock %}

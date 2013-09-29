@@ -25,11 +25,15 @@ class Posts(db.Model):
     title = db.Column(db.String(120))
     text = db.Column(db.String(120))
     image_url = db.Column(db.String(120))
-    sent = db.Column(db.Boolean(), default=True)
+    sent = db.Column(db.Boolean(), default=False)
     language = db.relationship('Language', backref=db.backref('posts', lazy='dynamic'))
     language_id = db.Column(db.Integer, db.ForeignKey('language.id'))
 
-    def __init__(self, title, text, image_url):
+    def __init__(self, title, text, image_url, language):
+        if isinstance(language, Language):
+            self.language = language
+        else:
+            self.songs = None
         self.title = title
         self.text = text
         self.image_url = image_url
@@ -134,12 +138,8 @@ class Language(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     language_name = db.Column(LanguageType.db_type())
 
-    def __init__(self, instrument_name, song):
-        if isinstance(song, Song):
-            self.songs = song
-        else:
-            self.songs = None
-        self.instrument_name = instrument_name
+    def __init__(self, language_name):
+        self.language_name = language_name
 
     def __repr__(self):
-        return "<Instrument %r>" % self.instrument_name
+        return "<Language %r>" % self.language_name

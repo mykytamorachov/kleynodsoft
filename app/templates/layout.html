@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Admin</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/admin_style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+            <div class="logo">
+                <img src="http://kleynodsoft.com/images/logo.png"/>
+
+                <form action="/signout" method="post">
+                    <input type="submit" value="logout"/>
+                </form>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/users">Users</a></li>
+                    <!--li><a href="/instruments">Instruments</a></li-->
+                </ul>
+            </nav>
+		</header>
+		<div id="content">
+			{% block content %}
+            {% endblock %}
+		</div>
+		<footer></footer>
+	</div>
+    <script type="text/javascript" src="/static/js/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+</body>
+</html>
